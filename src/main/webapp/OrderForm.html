@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Order Form</title>
+</head>
+<body>
+	<h1>Hughes Computers: Order Form</h1>
+	<form action="OrderFormServlet" method="post">
+		<table>
+			<tr>
+				<td align="left">Description:</td>
+				<td><input type="text" name="description" size="20" /></td>
+			</tr>
+			<tr>
+				<td align="left">Code:</td>
+				<td><input type="text" name="code" size="20" /></td>
+			</tr>
+			<tr>
+				<td align="left">Quantity:</td>
+				<td><input type="text" name="quantity" size="20" /></td>
+			</tr>
+			<tr>
+				<td align="left">Delivery:</td>
+
+			</tr>
+			<tr>
+				<td align="left"><input type="radio" name="delivery"
+					value="Same Day" />Same Day</td>
+			</tr>
+			<tr>
+				<td align="left"><input type="radio" name="delivery"
+					value="Express" />Express</td>
+			</tr>
+			<tr>
+				<td align="left"><input type="radio" name="delivery"
+					value="Standard" />Standard</td>
+			</tr>
+			<tr>
+				<td align="left">Customer_Id:</td>
+				<td><input type="password" name="id" size="20" /></td>
+			</tr>
+		</table>
+		<input type="submit" value="Place Order" /> <input type="reset" value="Cancel" />
+	</form>
+</body>
+</html>

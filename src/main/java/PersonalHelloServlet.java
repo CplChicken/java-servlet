@@ -1,0 +1,53 @@
+
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class PersonalHelloServlet
+ */
+public class PersonalHelloServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public PersonalHelloServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		String name = request.getParameter("name");
+		PrintWriter pw = response.getWriter();
+		
+		pw.append("<html><head><title>PersonalHelloServlet</title></head><body>");
+		
+		if (name == null || "".equals(name)) {
+			pw.append("<h1>Hello User</h1></br><h1>Don't forget to enter your name!</h1></body></html>");
+		}
+		else {
+			pw.append("<h1>Hello ");
+			pw.append(name);
+			pw.append("</h1></body></html>");
+		}
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}
